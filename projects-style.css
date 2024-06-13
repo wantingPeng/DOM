@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+/* project------1 */
+
+/* body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+.container{
+  border: 1px,solid,red;
+  width: 500px;
+  
+}
+.header{
+  font-size: 1rem;
+  border: solid 3px pink;
+  color: white;
+  background-color:gray;
+  padding: 5px;
+  margin: 7px auto;
+  width: 80%;
+}
+.main-content{
+  width :100%;
+  height :250px;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  padding: 50px 40px;
+}
+.text-area{
+  font: size 1.5rem ;
+  line-height: 1.5;
+}
+.person{
+  font-size: 1.6rem;
+  color: palevioletred;
+margin-top: 20px;
+text-transform: uppercase;
+}
+.button-area button{
+  background-color: black;
+  color: aliceblue;
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+} */
+
+/* project------2 */
+
+body{
+  
+background:url(shutterstock_259699643-1-1024x683.jpg);
+
+}
+#open-button{
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 350px;
+  height: 80px;
+  font-size: 2rem;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 0 3px black;
+background: transparent;
+transition: .5s;
+ }
+ 
+ #open-button:hover {
+  background-color: #fff;
+  color: #000;
+ }
+.container{
+  background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: .4s;
+}
+#bigger-container{
+
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0, .2);
+ }
+ 
+
+#close-button{
+  cursor: pointer;
+  font-size: 3rem;
+  color: #ff0000;
+ }
+ #close-button {
+  font-size: 3rem;
+ }
+ @keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
