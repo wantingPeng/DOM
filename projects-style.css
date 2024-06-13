@@ -172,3 +172,15 @@ transition: .5s;
   height: 0px;
   overflow: hidden;
 }
+.question .active{
+  font-size: 18px;
+  transition: .5s;
+}
+.active .answer {
+  height: 150px;
+}
+.active .question::after {
+  content: '-';
+  font-size: 30px;
+  transition: .5s;
+} 
