@@ -13,7 +13,6 @@ window.addEventListener('click',function(e){
   if (e.target === showContainer) {
     showContainer.style.display = 'none';
 }
-  
-  console.log(e.target === showContainer)
+
 })
 
