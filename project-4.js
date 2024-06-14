@@ -19,18 +19,19 @@ second<10?showSecond='0'+second.toString():showSecond=second;
 displayTimer.innerText=showHours+':'+showMinute+':'+showSecond;
 }
 let playid=document.querySelector('#play')
-let pauseid=document.querySelector('#pause')
-console.log(pauseid)
+//The event object has a target property which contains information about the element 
+//that actually received the event.
+stopStartBtn.addEventListener('click',function(e){
+//interval=window.setInterval(time,1000);
+if(e.target.getAttribute("id")=="play")
+  {  stopStartBtn.innerHTML=`<i class="fa-solid fa-pause" id="pause"></i>`;
+    const element=document.getElementById('pause');
 
-playid.addEventListener('click',function(e){
-  //interval=window.setInterval(time,1000);
-  playid.remove();
-  stopStartBtn.innerHTML=`<i class="fa-solid fa-pause" id="pause"></i>`
+    console.log(element.id)
+    
+  }
+else{
+  stopStartBtn.innerHTML=`<i class="fa-solid fa-play" id="play"></i>`;
+}
 
 })
-pauseid.addEventListener('click',function(e){
-  
-  pauseid.remove();
-}) 
-
-//
