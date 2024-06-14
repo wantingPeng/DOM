@@ -22,16 +22,16 @@ let playid=document.querySelector('#play')
 //The event object has a target property which contains information about the element 
 //that actually received the event.
 stopStartBtn.addEventListener('click',function(e){
-//interval=window.setInterval(time,1000);
 if(e.target.getAttribute("id")=="play")
-  {  stopStartBtn.innerHTML=`<i class="fa-solid fa-pause" id="pause"></i>`;
-    const element=document.getElementById('pause');
-
-    console.log(element.id)
+  {  interval=window.setInterval(time,1000);
+    stopStartBtn.innerHTML=`<i class="fa-solid fa-pause" id="pause"></i>`;
+    //const element=document.getElementById('pause');
+    //console.log(element.id)
     
   }
 else{
   stopStartBtn.innerHTML=`<i class="fa-solid fa-play" id="play"></i>`;
+  clearInterval(interval);
 }
 
 })
