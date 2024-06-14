@@ -185,7 +185,8 @@ transition: .5s;
   transition: .5s;
 } 
  */
- body {
+  /* project------4 */
+/*  body {
   height: 100vh;
   background: url(Swimming.jpg) no-repeat center top / cover;
   display: flex;
@@ -232,6 +233,58 @@ transition: .5s;
   background-color: red;
  }
 
+
+
+ */
+  /* project------5 */
+
+  body {
+    height: 100vh;
+    background: url(todo-list-seamless-pattern-universal-background-vector-7561340.jpg) no-repeat center center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-task-container {
+    width: 350px;
+    padding: 20px 10px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 3px;
+    margin-bottom: 20px;
+
+    display: flex;
+}
+
+input {
+    flex: 5;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+#add-task {
+
+    flex: 1;
+    transition: .3s;
+
+    font-size: 1.2rem;
+    padding: 5px;
+
+    background-color: #fff;
+    color: green;
+
+    border: green solid 2px;
+    border-radius: 10px;
+}
+
+#add-task:hover {
+    background-color: green;
+    color: #fff;
+}
 
 
 
