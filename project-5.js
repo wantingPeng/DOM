@@ -11,23 +11,32 @@ const inputTask=document.querySelector('#input-task')
 /* addTask.addEventListener('click', function(){
 const tastContainer=document.createElement('div')
 tastContainer.classList.add('tastContainer'); */
+function plusBtnClick(){
 
-addTask.addEventListener('click', function(){
-  const task=document.createElement('div')
-  task.innerText=`${inputTask.value}`
-  task.setAttribute('id','task')
-  taskContainer.append(task)
+  if (inputTask.value==''){
+    alert('Please Enter a Task')
+    addTask.removeEventListener('click', plusBtnClick)
+  }else if (inputTask.value!==''){
+    const task=document.createElement('div')
+    task.innerText=`${inputTask.value}`
+    task.setAttribute('id','task')
+    taskContainer.append(task)
+  
+    const checkBox=document.createElement('button')
+    checkBox.setAttribute('id','check-box')
+    checkBox.innerHTML='<i class="fa-solid fa-check"></i>';
+    console.log(checkBox.id)
+    taskContainer.append(checkBox)
+    console.log(checkBox)
+  
+    const bin=document.createElement('button')
+    bin.innerHTML='<i class="fa-solid fa-trash-can"></i>';
+    bin.setAttribute('id',"bin" )
+    taskContainer.append(bin)
+  
+  }
+  
+}
+addTask.addEventListener('click', plusBtnClick)
 
-  const checkBox=document.createElement('button')
-  checkBox.setAttribute('id','check-box')
-  checkBox.innerHTML='<i class="fa-solid fa-check"></i>';
-  console.log(checkBox.id)
-  taskContainer.append(checkBox)
-  console.log(checkBox)
 
-  const bin=document.createElement('button')
-  bin.innerHTML='<i class="fa-solid fa-trash-can"></i>';
-  bin.setAttribute('id',"bin" )
-  taskContainer.append(bin)
-
-})
