@@ -12,6 +12,7 @@
 const addTask=document.querySelector('#add-task')
 const taskContainer=document.querySelector('#task-container')
 const inputTask=document.querySelector('#input-task')
+const container=document.querySelector('.container')
 /* addTask.addEventListener('click', function(){
 const tastContainer=document.createElement('div')
 tastContainer.classList.add('tastContainer'); */
@@ -21,6 +22,9 @@ function plusBtnClick(){
     alert('Please Enter a Task')
    
   }else{
+    const taskContainer=document.createElement('div')
+    taskContainer.setAttribute("id", 'task-container')
+    container.append(taskContainer)
 
     const task=document.createElement('div')
     task.innerText=`${inputTask.value}`
@@ -30,9 +34,8 @@ function plusBtnClick(){
     const checkBox=document.createElement('button')
     checkBox.setAttribute('id','check-box')
     checkBox.innerHTML='<i class="fa-solid fa-check"></i>';
-    console.log(checkBox.id)
     taskContainer.append(checkBox)
-    console.log(checkBox)
+    
   
     const bin=document.createElement('button')
     bin.innerHTML='<i class="fa-solid fa-trash-can"></i>';
@@ -41,9 +44,7 @@ function plusBtnClick(){
 
     checkBox.addEventListener('click',handleCheckBox)
     bin.addEventListener('click',function(){
-      task.remove()
-      checkBox.remove()
-      bin.remove()
+      taskContainer.remove()
     })
   }
   }
