@@ -9,6 +9,8 @@
 //add event listener at check box when click it then style.textDecoration = "line-through"
 //add event listener at bin when click it then remove the <div id="task-container"></div>
 
+//when we typed text in box and clicked plus btn, placeholder="Enter Task" again,that means 
+//we need to clean the value to ''.
 const addTask=document.querySelector('#add-task')
 const taskContainer=document.querySelector('#task-container')
 const inputTask=document.querySelector('#input-task')
@@ -17,11 +19,14 @@ const container=document.querySelector('.container')
 const tastContainer=document.createElement('div')
 tastContainer.classList.add('tastContainer'); */
 function plusBtnClick(){
+  
+
 
   if (inputTask.value==''){
     alert('Please Enter a Task')
    
   }else{
+      
     const taskContainer=document.createElement('div')
     taskContainer.setAttribute("id", 'task-container')
     container.append(taskContainer)
@@ -43,17 +48,21 @@ function plusBtnClick(){
     taskContainer.append(bin)
 
     checkBox.addEventListener('click',handleCheckBox)
+    
     bin.addEventListener('click',function(){
       taskContainer.remove()
     })
+    inputTask.value=''
+
+    function handleCheckBox(){
+      task.style.textDecoration = "line-through";
+    }
   }
   }
 
 addTask.addEventListener('click', plusBtnClick)
 
-function handleCheckBox(){
-  task.style.textDecoration = "line-through";
-}
+
 
 
 
