@@ -286,5 +286,48 @@ input {
     color: #fff;
 }
 
+/* Styling for task which get added to to-do list */
 
+#task-container{
+  width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;}
 
+#task{
+  list-style: none;
+    flex: 4;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+  
+#task-container button{
+  flex: 1;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+#check-box{
+  color: orange;
+  margin-right: 5px;
+  border: solid 2px orange;
+  font-size: 1.5rem;
+}
+#bin{
+  color: red;
+    border: solid 2px red;
+    font-size: 1.3rem;
+}
+#check-box:hover {
+  background-color: orange;
+  color: #fff;
+}
+#bin:hover {
+  background-color: red;
+  color: #fff;
+}

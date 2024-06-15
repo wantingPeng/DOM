@@ -3,7 +3,11 @@
 //when click>>create  <div id task> <button id check-box>check box and  <button> bin at end first get element task-container,, then append all in it
 //mean while <div class task> take value form Enter Task
 
-//add event listener at 
+// if there are no input then alert() and every time click, keep poping alert()
+//till people type in , append the above 3 elements in container
+
+//add event listener at check box when click it then style.textDecoration = "line-through"
+//add event listener at bin when click it then remove the <div id="task-container"></div>
 
 const addTask=document.querySelector('#add-task')
 const taskContainer=document.querySelector('#task-container')
@@ -15,8 +19,9 @@ function plusBtnClick(){
 
   if (inputTask.value==''){
     alert('Please Enter a Task')
-    addTask.removeEventListener('click', plusBtnClick)
-  }else if (inputTask.value!==''){
+   
+  }else{
+
     const task=document.createElement('div')
     task.innerText=`${inputTask.value}`
     task.setAttribute('id','task')
@@ -33,10 +38,22 @@ function plusBtnClick(){
     bin.innerHTML='<i class="fa-solid fa-trash-can"></i>';
     bin.setAttribute('id',"bin" )
     taskContainer.append(bin)
-  
+
+    checkBox.addEventListener('click',handleCheckBox)
+    bin.addEventListener('click',function(){
+      task.remove()
+      checkBox.remove()
+      bin.remove()
+    })
   }
-  
-}
+  }
+
 addTask.addEventListener('click', plusBtnClick)
+
+function handleCheckBox(){
+  task.style.textDecoration = "line-through";
+}
+
+
 
 
